@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/connectDB');
 require('dotenv').config();
+const cookiesParser = require('cookie-parser');
 
 const app = express();
 // middlewares
@@ -12,6 +13,7 @@ app.use(
   })
 );
 app.use(express.json());
+app.use(cookiesParser());
 
 const PORT = process.env.PORT || 8080;
 
