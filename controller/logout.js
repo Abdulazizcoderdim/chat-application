@@ -6,7 +6,7 @@ async function logout(req, res) {
     };
 
     return res.cookie('token', '', cookieOptions).status(200).json({
-      message: 'session out',
+      message: 'Logout successfully',
       success: true,
     });
   } catch (error) {

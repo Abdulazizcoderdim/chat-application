@@ -29,7 +29,7 @@ async function registerUser(req, res) {
     await user.save();
 
     return res.status(201).json({
-      message: 'User created successfully',
+      message: 'You have successfully registered',
       data: user,
       success: true,
     });
